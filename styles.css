@@ -1,1 +1,90 @@
+/* Temel Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
 
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Bölüm Başlıkları */
+section h1, section h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Hakkında Bölümü */
+#about {
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+/* Projeler Bölümü */
+#projects {
+    padding: 40px;
+    background-color: #e9e9e9;
+}
+
+.project {
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.project h3 {
+    color: #333;
+}
+
+.project p {
+    font-size: 1em;
+}
+
+/* Beceriler Bölümü */
+#skills {
+    padding: 40px;
+    background-color: #fff;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#skills ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
