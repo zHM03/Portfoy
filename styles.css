@@ -1,47 +1,106 @@
-body {
+/* Genel Ayarlar */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #ffffff;
-  line-height: 1.6;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f1115;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+
+a {
+  color: #4fc3f7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
 header {
-  padding: 60px 20px;
+  padding: 80px 20px 40px;
   text-align: center;
-  background: #1f1f1f;
+  background: linear-gradient(145deg, #12151a, #0c0e12);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #bbbbbb;
 }
 
 .highlight {
   color: #4fc3f7;
 }
 
+/* Bölümler */
 section {
-  padding: 40px 20px;
-  max-width: 800px;
+  padding: 60px 20px;
+  max-width: 900px;
   margin: auto;
 }
 
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border-left: 4px solid #4fc3f7;
+  padding-left: 10px;
+}
+
+/* Hakkımda ve Yetenekler */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "• ";
+  color: #4fc3f7;
+  margin-right: 8px;
+}
+
+/* Proje Kartları */
 .project {
-  background: #1e1e1e;
+  background: #1a1d23;
+  border-radius: 12px;
   padding: 20px;
   margin: 20px 0;
-  border-left: 4px solid #4fc3f7;
-  transition: transform 0.2s;
+  border: 1px solid #2a2d33;
+  transition: transform 0.2s, box-shadow 0.3s;
 }
 
 .project:hover {
-  transform: scale(1.01);
+  transform: scale(1.015);
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.1);
 }
 
+.project h3 {
+  color: #4fc3f7;
+  margin-bottom: 10px;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: #1a1a1a;
+  background: #101216;
+  color: #888;
   font-size: 14px;
-}
-
-.project.clicked {
-  transform: scale(1.03);
-  transition: transform 0.2s ease;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
