@@ -40,3 +40,8 @@ footer {
   background: #1a1a1a;
   font-size: 14px;
 }
+
+.project.clicked {
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
