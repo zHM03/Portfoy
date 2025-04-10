@@ -1,125 +1,42 @@
-/* Temel Stil */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f2f5;
-    color: #333;
-    line-height: 1.6;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
 header {
-    background: linear-gradient(to right, #333, #444);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 60px 20px;
+  text-align: center;
+  background: #1f1f1f;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
+.highlight {
+  color: #4fc3f7;
 }
 
-header nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #ffd700;
-}
-
-/* Bölüm Başlıkları */
-section h1, section h2 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 30px;
-}
-
-/* Ortak Bölüm Stili */
 section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-/* Hakkında Bölümü */
-#about {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-/* Projeler Bölümü */
-#projects {
-    background-color: #f7f7f7;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
 .project {
-    margin-bottom: 30px;
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #1e1e1e;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #4fc3f7;
+  transition: transform 0.2s;
 }
 
 .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: scale(1.01);
 }
 
-.project h3 {
-    color: #2c3e50;
-}
-
-.project p {
-    font-size: 1em;
-}
-
-/* Beceriler Bölümü */
-#skills {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-#skills ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-#skills ul li {
-    font-size: 1em;
-    background-color: #e3e3e3;
-    padding: 10px 20px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-}
-
-#skills ul li:hover {
-    background-color: #d1d1d1;
-}
-
-/* Footer */
 footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #333;
-    color: #fff;
-    font-size: 0.9em;
+  text-align: center;
+  padding: 20px;
+  background: #1a1a1a;
+  font-size: 14px;
 }
