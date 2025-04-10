@@ -14,7 +14,7 @@
     }
 
     body {
-      background-color: #0a0e12;
+      background-color: #1e1e1e;
       color: #e0e0e0;
       line-height: 1.6;
     }
@@ -23,10 +23,10 @@
       background-color: #2c2c2c;
       padding: 20px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #444;
+      position: relative;
     }
 
     header h1 {
@@ -35,9 +35,7 @@
 
     nav {
       display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 10px;
+      gap: 20px;
     }
 
     nav a {
@@ -48,6 +46,20 @@
 
     nav a:hover {
       color: #00adb5;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: #e0e0e0;
+      margin: 4px 0;
+      transition: 0.4s;
     }
 
     .hero {
@@ -97,29 +109,26 @@
       color: #777;
     }
 
-    /* Responsive eklemeler */
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
+    /* Mobil için menüyü gizle */
+    @media (max-width: 768px) {
       nav {
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero h2 {
-        font-size: 24px;
-      }
-
-      .projects {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #2c2c2c;
         padding: 10px;
-        gap: 15px;
+        border-radius: 10px;
+        z-index: 1000;
       }
 
-      .project-card {
-        padding: 15px;
+      nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
       }
     }
   </style>
@@ -128,7 +137,12 @@
 
   <header>
     <h1>HM Portföy</h1>
-    <nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav">
       <a href="#">Anasayfa</a>
       <a href="#">Projeler</a>
       <a href="#">Hakkımda</a>
@@ -159,6 +173,15 @@
   <footer>
     © 2025 HM. Tüm hakları saklıdır.
   </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
 
 </body>
 </html>
