@@ -60,7 +60,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5cqmin 20px;
+  padding: 5% 20px;
   text-align: left;
 }
 
@@ -102,22 +102,13 @@ h2 {
 .line {
   display: block;
   opacity: 0;
-  transform: translateX(-40px);
-  animation: fadeInLeft 1s ease forwards;
+  transform: translateY(20px); /* Yazı başlangıçta aşağı kaymış olarak görünmeli */
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.line:nth-child(1) { animation-delay: 0.2s; }
-.line:nth-child(2) { animation-delay: 0.6s; }
-.line:nth-child(3) { animation-delay: 1s; }
-.line:nth-child(4) { animation-delay: 1.4s; }
-.line:nth-child(5) { animation-delay: 1.8s; }
-.line:nth-child(6) { animation-delay: 2.2s; }
-
-@keyframes fadeInLeft {
-  to {
-      opacity: 1;
-      transform: translateX(0);
-  }
+.line.visible {
+  opacity: 1;
+  transform: translateY(0); /* Kaydırma tamamlandığında yazı yukarı gelir */
 }
 
 .project-card:hover {
@@ -172,13 +163,13 @@ footer {
   }
 
   /* Yazıların kaydırma ile görünmesini sağla */
-  .hero .animated-text {
+  .hero .line {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
   }
 
-  .hero .animated-text.visible {
+  .hero .line.visible {
       opacity: 1;
       transform: translateY(0);
   }
