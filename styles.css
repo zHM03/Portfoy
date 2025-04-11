@@ -135,7 +135,7 @@ footer {
 
 /* Mobil için menüyü gizle */
 /* Mobil için menüyü gizle */
-@media (max-width: 768px) {
+@media (max-width: 1230px) {
   nav {
       display: none;
       flex-direction: column;
