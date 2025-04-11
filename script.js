@@ -8,14 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Sadece mobilde yazı aşağı kayınca göster
   if (window.innerWidth <= 768) {
-    const text = document.querySelector('.hero .text');
+    const lines = document.querySelectorAll('.hero .line'); // 'line' sınıfındaki tüm öğeleri seçiyoruz
 
     const revealOnScroll = () => {
-      const rect = text.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        text.classList.add('visible');
-        window.removeEventListener('scroll', revealOnScroll);
-      }
+      lines.forEach((line, index) => {
+        const rect = line.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          line.classList.add('visible');
+        }
+      });
     };
 
     window.addEventListener('scroll', revealOnScroll);
