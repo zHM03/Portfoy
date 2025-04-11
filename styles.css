@@ -131,10 +131,6 @@ transform: translateX(0);
 
 }
 
-.line.visible {
-  opacity: 1;
-  transform: translateY(0); /* Kaydırma tamamlandığında yazı yukarı gelir */
-}
 
 .project-card:hover {
   transform: translateY(-5px);
