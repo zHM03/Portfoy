@@ -85,20 +85,6 @@ h2 {
   max-width: 600px; /* Yazının genişliğini sınırlamak için */
 }
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.project-card {
-  background-color: #2c2c2c;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
-}
 
 .line {
   display: block;
@@ -138,15 +124,6 @@ h2 {
 }
 
 
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-card h3 {
-  margin-bottom: 10px;
-  color: #00adb5;
-}
-
 footer {
   position: fixed;
   bottom: 0;
@@ -155,7 +132,6 @@ footer {
   text-align: center;
   padding: 5px;
   color: #e9dfce;
-}X(-20
 
 /* Mobil için menüyü gizle */
 @media (max-width: 768px) {
