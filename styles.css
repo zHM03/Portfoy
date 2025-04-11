@@ -125,7 +125,7 @@ h2 {
   from {
 
     opacity: 0;
-    transform: translate X(
+    transform: translateX(-20px)
   }
   to {
 
