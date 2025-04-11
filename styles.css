@@ -134,6 +134,7 @@ footer {
   color: #e9dfce;
 
 /* Mobil için menüyü gizle */
+/* Mobil için menüyü gizle */
 @media (max-width: 768px) {
   nav {
       display: none;
@@ -158,6 +159,7 @@ footer {
   .hero {
       flex-direction: column; /* Mobilde yazı ve resim dikey hizalanacak */
       text-align: center; /* Yazı merkezde olacak */
+      padding: 20px 10px; /* Dikey hizalama için padding ekleyin */
   }
 
   .hero img {
@@ -169,14 +171,14 @@ footer {
       margin-top: 20px; /* Yazı ile resim arasına boşluk eklemek */
   }
 
-  /* Yazıların kaydırma ile görünmesini sağla */
-  .hero .line {
+  /* Yazıların kayması için animasyon ekleme */
+  .line {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
   }
 
-  .hero .line.visible {
+  .line.visible {
       opacity: 1;
       transform: translateY(0);
   }
