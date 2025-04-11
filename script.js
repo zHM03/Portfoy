@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const revealOnScroll = () => {
       lines.forEach((line) => {
         const rect = line.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          line.classList.add('visible');
+        if (rect.top < window.innerHeight - 100) { // Eğer öğe görünürse
+          line.classList.add('visible'); // visible sınıfını ekle
         }
       });
     };
