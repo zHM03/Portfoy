@@ -62,6 +62,7 @@ nav a:hover {
   justify-content: center;
   padding: 5% 20px;
   text-align: left;
+  flex-direction: row; /* Mobil dışında resim ve yazı yan yana */
 }
 
 .hero img {
@@ -153,13 +154,17 @@ footer {
   }
 
   .hero {
-      flex-direction: column;
-      text-align: center; /* Mobilde yazı ortalanacak */
+      flex-direction: column; /* Mobilde yazı ve resim dikey hizalanacak */
+      text-align: center; /* Yazı merkezde olacak */
   }
 
   .hero img {
       margin-right: 0;
-      margin-bottom: 20px;
+      margin-bottom: 20px; /* Resmin altındaki boşluğu artırarak yazıyı daha altta tutun */
+  }
+
+  .hero h2, .hero p {
+      margin-top: 20px; /* Yazı ile resim arasına boşluk eklemek */
   }
 
   /* Yazıların kaydırma ile görünmesini sağla */
