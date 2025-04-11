@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HM Portföy</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>HM Portföy</h1>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="nav">
+        <a href="#">Anasayfa</a>
+        <a href="#">Projeler</a>
+        <a href="#">Hakkımda</a>
+        <a href="#">İletişim</a>
+      </nav>
+    </header>
+
+    <h2>Merhaba, Ben HM</h2>
+    <section class="hero">
+      <img class="me" src="me.jpg" height="300" /><br><br>
+      <p>
+        Yazılım geliştirme yolculuğunda aktif olarak ilerleyen bir
+        geliştiriciyim.<br>
+        HTML, CSS ve JavaScript ile web arayüzleri
+        oluşturabiliyor; aynı zamanda Python dilinde ileri seviye bilgiye
+        sahibim.<br>
+        Masaüstü uygulamaları geliştirmenin yanı sıra veritabanı
+        yönetimi konusunda da deneyimliyim.<br> Ayrıca botlar
+        geliştirerek topluluk yönetimini kolaylaştıran çözümler sundum.<br>
+        Hem bireysel hem de ekip projelerinde yer aldım; öğrenmeye ve yeni
+        teknolojilere adapte olmaya büyük önem veriyorum.<br>
+        Hedefim, kullanıcı dostu ve işlevsel yazılımlar geliştirerek yazılım alanında kalıcı
+        projelere imza atmak.Photoshop da var abe
+      </p>
+    </section>
+    <footer>© 2025 HM. Tüm hakları saklıdır.</footer>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const nav = document.getElementById("nav");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>
