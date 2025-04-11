@@ -42,4 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => project.classList.remove("clicked"), 300);
     });
   });
+
+  // Sayfa açılışında animasyonu başlat
+  const animateHeroText = () => {
+    const heroText = document.querySelector('.hero .animated-text');
+    if (heroText) {
+      heroText.classList.add('visible'); // Yazıyı göster
+    }
+  };
+
+  // Sayfa yüklendikten sonra animasyonu başlat
+  setTimeout(animateHeroText, 1000); // 1 saniye sonra yazı animasyonu
 });
