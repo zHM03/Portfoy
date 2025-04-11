@@ -38,6 +38,10 @@ nav a {
   transition: color 0.3s;
 }
 
+nav a:hover {
+  color: #00adb5; /* Hover efekti ekledim */
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -62,7 +66,7 @@ nav a {
 
 .hero img {
   margin-right: 20px;
-  border-radius: 50%; /* Resmin kenarlarını yuvarlatmak istersen */
+  border-radius: 50%; /* Resmin kenarlarını yuvarlatmak için */
   height: auto;
   max-width: 300px; /* Resmin genişliğini sınırlamak için */
 }
