@@ -6,21 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.opacity = 1;
   }, 100);
 
-  // Sadece mobilde scroll olursa .line yazılarını göster
+  // Mobilde scroll ile .line yazılarını göster / en üste çıkınca gizle
   if (window.innerWidth <= 768) {
     const lines = document.querySelectorAll('.line');
 
-    const revealOnScroll = () => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
       lines.forEach((line) => {
         const rect = line.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
+
+        if (scrollTop > 20 && rect.top < window.innerHeight - 100) {
           line.classList.add('visible');
+        } else if (scrollTop <= 20) {
+          line.classList.remove('visible');
         }
       });
     };
 
-    window.addEventListener('scroll', revealOnScroll);
-    // İlk yüklemede kontrol etmiyoruz -> sadece scroll sonrası görünür
+    window.addEventListener('scroll', handleScroll);
+    // İlk yüklemede çalıştırmıyoruz -> sadece scroll olursa yazılar görünür
   }
 
   // Menü toggle
@@ -43,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Sayfa açılışında hero yazısını göster (mobilde bu animasyon istenmiyorsa silebilirsin)
+  // Hero yazısını göster (istersen silebilirsin)
   const animateHeroText = () => {
     const heroText = document.querySelector('.hero .animated-text');
     if (heroText) {
