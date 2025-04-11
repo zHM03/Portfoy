@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const lines = document.querySelectorAll('.hero .line'); // 'line' sınıfındaki tüm öğeleri seçiyoruz
 
     const revealOnScroll = () => {
-      lines.forEach((line, index) => {
+      lines.forEach((line) => {
         const rect = line.getBoundingClientRect();
         if (rect.top < window.innerHeight - 100) {
           line.classList.add('visible');
@@ -24,15 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Menü toggle
-  const menuToggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("nav");
 
-  menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("show");
-  });
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  }
 
   // Proje kutularına tıklama animasyonu
-  const projects = document.querySelectorAll(".project");
+  const projects = document.querySelectorAll(".project-card");
 
   projects.forEach(project => {
     project.addEventListener("click", () => {
