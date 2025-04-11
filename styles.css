@@ -120,14 +120,18 @@ h2 {
 .line:nth-child(6) { animation-delay: 2.2s; }
 
 @keyframes fadeInLeft {
+  from {
 
-to {
+    opacity: 0;
+    transform: translate X(-20)
+  }
+  to {
 
-opacity: 1;
+   opacity: 1;
 
-transform: translateX(0);
+   transform: translateX(0);
 
-}
+ }
 
 }
 
@@ -149,7 +153,7 @@ footer {
   text-align: center;
   padding: 5px;
   color: #e9dfce;
-}
+}X(-20
 
 /* Mobil için menüyü gizle */
 @media (max-width: 768px) {
