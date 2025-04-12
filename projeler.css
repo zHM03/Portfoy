@@ -1,21 +1,90 @@
-body {
-  font-family: 'Poppins', sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #1e2125;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
 header {
-  background-color: #333;
-  color: white;
+  background-color: #f3deb9;
   padding: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1e2125;
+  color: #1e2125;
+  position: relative;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav {
+  display: flex;
+  color: #1e2125;
+  gap: 20px;
 }
 
 nav a {
-  color: white;
   text-decoration: none;
-  margin: 0 15px;
+  color: #1e2125;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00adb5;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #e0e0e0;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 20px;
+  text-align: left;
+  flex-direction: row;
+}
+
+.hero img,
+.me {
+  margin-right: 20px;
+  border-radius: 50%;
+  height: auto;
+  max-width: 300px;
+  width: 100%;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+  padding-top: 80px;
+  color: #f3deb9;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #e9dfce;
+  max-width: 600px;
 }
 
 .projects {
