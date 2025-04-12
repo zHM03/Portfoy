@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       lines.forEach((line) => {
         const rect = line.getBoundingClientRect();
 
+        // Scroll aşağı doğru yapıldıkça yazılar görünür
         if (scrollTop > 20 && rect.top < window.innerHeight - 100) {
           line.classList.add('visible');
         } else if (scrollTop <= 20) {
@@ -25,7 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    // İlk yüklemede çalıştırmıyoruz -> sadece scroll olursa yazılar görünür
+    
+    // Sayfa yüklendikten sonra, ilk başta tüm .line öğeleri gizlenir
+    lines.forEach((line) => {
+      line.classList.remove('visible');
+    });
   }
 
   // Menü toggle
@@ -48,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Hero yazısını göster (istersen silebilirsin)
+  // Hero yazısını göster (isteğe bağlı)
   const animateHeroText = () => {
     const heroText = document.querySelector('.hero .animated-text');
     if (heroText) {
