@@ -66,7 +66,7 @@ footer {
 }
 
 .language-switcher {
-  position: fixed;
+  position: absolute;
   top: 120px;
   left: 10px;
   padding-top: 20px;
