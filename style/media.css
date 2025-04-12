@@ -1,44 +1,101 @@
 @media (max-width: 768px) {
-    nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background-color: #2c2c2c;
-        padding: 10px;
-        border-radius: 10px;
-        z-index: 1000;
+    * {
+      box-sizing: border-box;
     }
   
-    nav.show {
-        display: flex;
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  
+    header {
+      background-color: #f3deb9;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1e2125;
+      color: #1e2125;
+      position: relative;
     }
   
     .menu-toggle {
-        display: flex;
+      display: block;
+      cursor: pointer;
+    }
+  
+    .menu-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 4px 0;
+
+    }
+  
+    nav {
+      display: none;
+      flex-direction: row; /* Yan yana yerleştirmek için 'column' yerine 'row' */
+      position: absolute;
+      top: 80%;
+      left: 0;
+      width: 100%;
+      background-color: #f3deb9;
+      z-index: 1000;
+    }
+  
+    nav.active {
+      display: flex;
+    }
+  
+    nav a {
+      padding: 1px;
+      text-align: center;
+      text-decoration: none;
+      color: #1e2125;
+      font-size: 16px;
+      flex: 1; /* Her bir menü öğesinin eşit şekilde genişlemesini sağlar */
+    }
+  
+    nav a:last-child {
+      border-right: none;
     }
   
     .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .me {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  
+    .animated-text {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .dropdown-btn {
+      font-size: 14px;
+    }
+    html, body {
+        height: 100%; /* Sayfanın tamamının yüksekliğini belirler */
+        margin: 0;
+        padding: 0;
+        }
+        
+        body {
+        display: flex;
         flex-direction: column;
-        text-align: center; /* Mobilde yazı ortalanacak */
-    }
-  
-    .hero img {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-  
-    /* Yazıların kaydırma ile görünmesini sağla */
-    .hero .animated-text {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-  
-    .hero .animated-text.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+        }
+        
+        main {
+        flex: 1; /* İçerik kısmını esnek hale getirir */
+        }
+        
+
   }
   
