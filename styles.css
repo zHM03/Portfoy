@@ -87,6 +87,38 @@ h2 {
   max-width: 600px;
 }
 
+/* Dil değiştirme menüsünü merkezi hale getirelim ve modern bir görünüm verelim */
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.language-switcher select {
+  background-color: #444;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.language-switcher select:hover {
+  background-color: #555;
+}
+
+.language-switcher select:focus {
+  background-color: #666;
+  box-shadow: 0 0 5px rgba(0, 128, 255, 0.6);
+}
 /* Animasyon için satır satır görünürlük */
 .line {
   opacity: 0;
