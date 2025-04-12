@@ -39,7 +39,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #00adb5; /* Hover efekti ekledim */
+  color: #00adb5;
 }
 
 .menu-toggle {
@@ -62,14 +62,16 @@ nav a:hover {
   justify-content: center;
   padding: 5% 20px;
   text-align: left;
-  flex-direction: row; /* Mobil dışında resim ve yazı yan yana */
+  flex-direction: row;
 }
 
-.hero img {
+.hero img,
+.me {
   margin-right: 20px;
-  border-radius: 50%; /* Resmin kenarlarını yuvarlatmak için */
+  border-radius: 50%;
   height: auto;
-  max-width: 300px; /* Resmin genişliğini sınırlamak için */
+  max-width: 300px;
+  width: 100%;
 }
 
 h2 {
@@ -82,47 +84,34 @@ h2 {
 .hero p {
   font-size: 16px;
   color: #e9dfce;
-  max-width: 600px; /* Yazının genişliğini sınırlamak için */
+  max-width: 600px;
 }
-
 
 .line {
   display: block;
   opacity: 0;
-  transform: translateY(20px); /* Yazı başlangıçta aşağı kaymış olarak görünmeli */
+  transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
-  animation: fadeInLeft 0.6s ease forwards; 
+  animation: fadeInLeft 0.6s ease forwards;
 }
-  
 
 .line:nth-child(1) { animation-delay: 0.2s; }
-
 .line:nth-child(2) { animation-delay: 0.6s; }
-
 .line:nth-child(3) { animation-delay: 1s; }
-
 .line:nth-child(4) { animation-delay: 1.4s; }
-
 .line:nth-child(5) { animation-delay: 1.8s; }
-
 .line:nth-child(6) { animation-delay: 2.2s; }
 
 @keyframes fadeInLeft {
   from {
-
     opacity: 0;
     transform: translateX(-20px);
   }
   to {
-
-   opacity: 1;
-
-   transform: translateX(0);
-
- }
-
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
 
 footer {
   position: fixed;
@@ -133,53 +122,53 @@ footer {
   padding: 5px;
   color: #e9dfce;
 }
-/* Mobil için menüyü gizle */
-/* Mobil için menüyü gizle */
+
+/* Mobil için */
 @media (max-width: 1230px) {
   nav {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      background-color: #2c2c2c;
-      padding: 10px;
-      border-radius: 10px;
-      z-index: 1000;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #2c2c2c;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
   }
 
   nav.show {
-      display: flex;
+    display: flex;
   }
 
   .menu-toggle {
-      display: flex;
+    display: flex;
   }
 
   .hero {
-      flex-direction: column; /* Mobilde yazı ve resim dikey hizalanacak */
-      text-align: center; /* Yazı merkezde olacak */
-      padding: 20px 10px; /* Dikey hizalama için padding ekleyin */
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
   }
 
-  .hero img {
-      margin-right: 0;
-      margin-bottom: 20px; /* Resmin altındaki boşluğu artırarak yazıyı daha altta tutun */
+  .hero img,
+  .me {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 
   .hero h2, .hero p {
-      margin-top: 20px; /* Yazı ile resim arasına boşluk eklemek */
+    margin-top: 20px;
   }
 
-  /* Yazıların kayması için animasyon ekleme */
   .line {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
 
   .line.visible {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
