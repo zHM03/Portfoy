@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #2c2c2c;
+        padding: 10px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+  
+    nav.show {
+        display: flex;
+    }
+  
+    .menu-toggle {
+        display: flex;
+    }
+  
+    .hero {
+        flex-direction: column;
+        text-align: center; /* Mobilde yazı ortalanacak */
+    }
+  
+    .hero img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+  
+    /* Yazıların kaydırma ile görünmesini sağla */
+    .hero .animated-text {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+  
+    .hero .animated-text.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
