@@ -5,10 +5,20 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+  height: 100%; /* Sayfa yüksekliğini tam olarak kapsar */
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #1e2125;
   color: #ffffff;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -56,13 +66,13 @@ h2 {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   text-align: center;
-  padding: 5px;
+  padding: 10px 0;
   color: #e9dfce;
+  width: 100%;
+  /* Sabitleme değil, normal olarak alt kısmı gösterir */
+  position: relative;
+  margin-top: auto; /* İçeriği footer'a doğru çeker */
 }
 
 .language-switcher {
