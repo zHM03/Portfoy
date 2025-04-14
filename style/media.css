@@ -1,103 +1,98 @@
 @media (max-width: 768px) {
-    * {
-      box-sizing: border-box;
-      max-widht: 100%;
-    }
-  
-    body {
-      margin: 0;
-      padding: 0;
-    }
-  
-    header {
-      background-color: #f3deb9;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #1e2125;
-      color: #1e2125;
-      position: relative;
-    }
-  
-    .menu-toggle {
-      display: block;
-      cursor: pointer;
-    }
-  
-    .menu-toggle span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 4px 0;
-
-    }
-  
-    nav {
-      display: none;
-      flex-direction: row; /* Yan yana yerleştirmek için 'column' yerine 'row' */
-      position: absolute;
-      top: 80%;
-      left: 0;
-      width: 100%;
-      background-color: #f3deb9;
-      z-index: 1000;
-    }
-  
-    nav.active {
-      display: flex;
-    }
-  
-    nav a {
-      padding: 1px;
-      text-align: center;
-      text-decoration: none;
-      color: #1e2125;
-      font-size: 16px;
-      flex: 1; /* Her bir menü öğesinin eşit şekilde genişlemesini sağlar */
-    }
-  
-    nav a:last-child {
-      border-right: none;
-    }
-  
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      padding: 20px;
-    }
-  
-    .me {
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      margin: 0 auto;
-      display: block;
-    }
-  
-    .animated-text {
-      font-size: 16px;
-      padding: 10px;
-    }
-  
-    .dropdown-btn {
-      font-size: 14px;
-    }
-    html, body {
-        height: 100%; /* Sayfanın tamamının yüksekliğini belirler */
-        margin: 0;
-        padding: 0;
-        }
-        
-        body {
-        display: flex;
-        flex-direction: column;
-        }
-        
-        main {
-        flex: 1; /* İçerik kısmını esnek hale getirir */
-        }
-        
-
+  * {
+    box-sizing: border-box;
+    max-width: 100%;
   }
-  
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  header {
+    background-color: #f3deb9;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1e2125;
+    color: #1e2125;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+  }
+
+  nav {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    background-color: #f3deb9;
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 1px;
+    text-align: center;
+    text-decoration: none;
+    color: #1e2125;
+    font-size: 16px;
+    flex: 1;
+  }
+
+  nav a:last-child {
+    border-right: none;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* Yatayda ortalama */
+    justify-content: center; /* Dikeyde ortalama (gerekirse) */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .me {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .animated-text {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .dropdown-btn {
+    font-size: 14px;
+  }
+}
