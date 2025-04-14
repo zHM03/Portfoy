@@ -80,7 +80,7 @@
 
   .me {
     display: block !important;
-    width: 60% !important;
+    width: 75% !important;
     max-width: 300px !important;
     height: auto !important;
     margin: 0 auto !important;
@@ -93,5 +93,7 @@
 
   .dropdown-btn {
     font-size: 14px !important;
+    display: flex;
+    justify-content: flex-start;
   }
 }
