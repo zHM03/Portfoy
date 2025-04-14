@@ -96,4 +96,22 @@
     display: flex;
     justify-content: flex-start;
   }
+  .mobile-section {
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-section {
+    background-color: #1e2125;
+  }
+
+  .about-section {
+    background-color: #1e2125;
+  }
 }
