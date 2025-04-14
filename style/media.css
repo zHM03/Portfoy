@@ -76,7 +76,6 @@
     align-items: center;     /* Yatayda ortalama */
     justify-content: center; /* Dikeyde ortalama (gerekirse) */
     text-align: center;
-    padding: 20px;
   }
 
   .me {
