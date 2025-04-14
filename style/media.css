@@ -1,6 +1,7 @@
 @media (max-width: 768px) {
     * {
       box-sizing: border-box;
+      max-widht: 100%;
     }
   
     body {
