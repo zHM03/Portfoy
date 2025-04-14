@@ -20,14 +20,14 @@
   }
 
   header {
-    background-color: #f3deb9 !important;
-    padding: 15px 20px !important;
+    background-color: #f3deb9;
+    padding: 15px 20px;
     display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    border-bottom: 1px solid #1e2125 !important;
-    color: #1e2125 !important;
-    position: relative !important;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1e2125;
+    color: #1e2125;
+    position: relative;
   }
 
   .menu-toggle {
