@@ -21,14 +21,14 @@
 
   header {
     background-color: #f3deb9;
-    padding: 15px 20px;
-    display: flex !important;
+    padding: 20px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #1e2125;
     color: #1e2125;
     position: relative;
-  }
+}
 
   .menu-toggle {
     display: block !important;
