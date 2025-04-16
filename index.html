@@ -4,14 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HM Portföy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style/media.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style/styles.css" />
-    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/index.css"/>
+    <link rel="stylesheet" href="style/media.css"/>
   </head>
   <body>
+    <header>
+      <h1 data-i18n="siteTitle">Hisham Portföy</h1>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="nav">
+        <a href="index.html" data-i18n="home">Anasayfa</a>
+        <a href="projects.html" data-i18n="projects">Projeler</a>
+        <a href="#" data-i18n="about">Hakkımda</a>
+        <a href="#" data-i18n="contact">İletişim</a>
+      </nav>
+    </header>
 
-    <!-- DİL SEÇİMİ -->
+    <!-- Dil değiştirme menüsü -->
     <div class="language-switcher">
       <div class="custom-dropdown">
         <button class="dropdown-btn" id="dropdownBtn">LANGUAGE</button>
@@ -24,26 +41,23 @@
       </div>
     </div>
 
-    <!-- BÖLÜM 1: Giriş + Resim -->
-    <section class="hero-section mobile-section">
-      <h2 data-i18n="greeting">Ben Hisham</h2>
-      <img src="assets/me.jpg" class="me" alt="Hisham" />
-    </section>
-
-    <!-- BÖLÜM 2: Hakkımda -->
-    <section class="about-section mobile-section">
+    <h2 data-i18n="greeting">Ben Hisham</h2>
+    <section class="hero">
+      <img src="assets/me.jpg" class="me" alt="Hisham" /><br><br><br>
+      <div class="arrow"></div><br><br><br>
       <div class="animated-text">
-        <span class="line" data-i18n="line1">Yazılım geliştirme yolculuğunda aktif olarak ilerleyen bir geliştiriciyim.</span><br><br>
-        <span class="line" data-i18n="line2">HTML, CSS ve JavaScript ile web arayüzleri oluşturabiliyor; aynı zamanda Python dilinde ileri seviye bilgiye sahibim.</span><br><br>
-        <span class="line" data-i18n="line3">Masaüstü uygulamaları geliştirmenin yanı sıra veritabanı yönetimi konusunda da deneyimliyim.</span><br><br>
-        <span class="line" data-i18n="line4">Ayrıca botlar geliştirerek topluluk yönetimini kolaylaştıran çözümler sundum.</span><br><br>
-        <span class="line" data-i18n="line5">Hem bireysel hem de ekip projelerinde yer aldım; öğrenmeye ve yeni teknolojilere adapte olmaya büyük önem veriyorum.</span><br><br>
+        <span class="line" data-i18n="line1">Yazılım geliştirme yolculuğunda aktif olarak ilerleyen bir geliştiriciyim.</span>
+        <span class="line" data-i18n="line2">HTML, CSS ve JavaScript ile web arayüzleri oluşturabiliyor; aynı zamanda Python dilinde ileri seviye bilgiye sahibim.</span>
+        <span class="line" data-i18n="line3">Masaüstü uygulamaları geliştirmenin yanı sıra veritabanı yönetimi konusunda da deneyimliyim.</span>
+        <span class="line" data-i18n="line4">Ayrıca botlar geliştirerek topluluk yönetimini kolaylaştıran çözümler sundum.</span>
+        <span class="line" data-i18n="line5">Hem bireysel hem de ekip projelerinde yer aldım; öğrenmeye ve yeni teknolojilere adapte olmaya büyük önem veriyorum.</span>
         <span class="line" data-i18n="line6">Hedefim, kullanıcı dostu ve işlevsel yazılımlar geliştirerek yazılım alanında kalıcı projelere imza atmak.</span>
       </div>
-    </section>
+    </section><br><br><br><br><br><br>
 
     <footer data-i18n="footer">© 2025 HM. Tüm hakları saklıdır.</footer>
 
     <script src="script/script.js"></script>
+    <script src="script/mediascript.js"></script>
   </body>
 </html>
