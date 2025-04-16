@@ -138,8 +138,20 @@ const translations = {
 };
 
 const switchLanguage = (lang) => {
+  // Dil çevirisi
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     el.textContent = translations[lang][key] || key;
   });
+
+  // Animasyonları sıfırla ve yeniden tetikle
+  const lines = document.querySelectorAll(".line");
+
+  lines.forEach((line) => {
+    line.style.animation = "none"; // Animasyonu sıfırla
+    // Yeniden çizim tetiklemesi için reflow:
+    void line.offsetWidth;
+    line.style.animation = ""; // CSS’te tanımlı animasyonu geri yükle
+  });
 };
+
