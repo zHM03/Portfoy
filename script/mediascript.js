@@ -8,19 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
   let lastScrollY = window.scrollY;
 
   // Sayfa yüklendiğinde animasyonu gizle
-  animatedText.style.display = "none"; // Başlangıçta animasyonu gizle
+  animatedText.style.display = "none";
 
   // Animasyonu göstermek için fonksiyon
-  function showAnimatedText() {
+  function showAnimatedText(callback) {
     if (!isVisible) {
-      animatedText.style.display = "block"; // Göster
+      animatedText.style.display = "block";
       setTimeout(() => {
         animatedText.classList.add("visible");
         lines.forEach((line, i) => {
           setTimeout(() => line.classList.add("visible"), i * 200);
         });
+        if (typeof callback === "function") {
+          setTimeout(callback, lines.length * 200 + 100);  // Animasyonlar bittikten sonra çağır
+        }
       }, 20);
       isVisible = true;
+    } else {
+      if (typeof callback === "function") callback(); // Zaten görünüyorsa direkt kaydır
     }
   }
 
@@ -30,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       animatedText.classList.remove("visible");
       lines.forEach(line => line.classList.remove("visible"));
       setTimeout(() => {
-        animatedText.style.display = "none"; // Animasyonu gizle
+        animatedText.style.display = "none";
       }, 600);
       isVisible = false;
     }
@@ -42,21 +47,22 @@ document.addEventListener("DOMContentLoaded", function () {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        showAnimatedText(); // Aşağı kaydırınca animasyonu göster
+        showAnimatedText();
       } else if (currentScrollY < lastScrollY) {
-        hideAnimatedText(); // Yukarı kaydırınca animasyonu gizle
+        hideAnimatedText();
       }
 
       lastScrollY = currentScrollY;
     });
   }
 
-  // Ok simgesine tıklanınca animasyonu hemen göster ve sayfanın en altına kaydır
+  // Ok simgesine tıklanınca animasyonu göster ve sayfanın en altına kaydır
   arrow.addEventListener("click", () => {
-    showAnimatedText();  // Animasyonu hemen göster
-    window.scrollTo({
-      top: document.body.scrollHeight,  // Sayfanın en altına kaydır
-      behavior: "smooth"  // Kaydırmayı yumuşak yap
+    showAnimatedText(() => {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
     });
   });
 });
