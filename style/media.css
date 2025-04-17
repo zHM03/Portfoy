@@ -69,17 +69,20 @@
     50% { transform: translateY(10px) rotate(45deg); }
   }
 
-  /* ANİMASYONLU YAZI */
+  /* ANİMASYONLU YAZI ALANI */
   .animated-text {
+    min-height: 300px; /* Sayfa kaydırıldığında boş alan oluşsun */
     opacity: 0;
-    max-height: 0;
     overflow: hidden;
-    transition: opacity 0.6s ease, max-height 0.6s ease;
+    transition: opacity 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .animated-text.visible {
     opacity: 1;
-    max-height: 500px; /* Yazının yüksekliğine göre artırılabilir */
   }
 
   .line {
