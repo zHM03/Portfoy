@@ -5,69 +5,50 @@ document.addEventListener("DOMContentLoaded", function () {
   const lines = document.querySelectorAll(".line");
 
   let isVisible = false;
-  let lastScrollY = window.scrollY;
 
-  animatedText.style.display = "none";
+  if (isMobile) {
+    animatedText.style.opacity = 0;
+    animatedText.style.transition = "opacity 0.6s ease";
 
-  function showAnimatedText() {
-    if (!isVisible) {
-      animatedText.style.display = "block";
-      setTimeout(() => {
+    function showAnimatedText() {
+      if (!isVisible) {
+        animatedText.style.opacity = 1;
         animatedText.classList.add("visible");
         lines.forEach((line, i) => {
           setTimeout(() => line.classList.add("visible"), i * 200);
         });
-      }, 10);
-      isVisible = true;
+        isVisible = true;
+      }
     }
-  }
 
-  function hideAnimatedText() {
-    if (isVisible) {
-      animatedText.classList.remove("visible");
-      lines.forEach(line => line.classList.remove("visible"));
-      setTimeout(() => {
-        animatedText.style.display = "none";
-      }, 600);
-      isVisible = false;
+    function hideAnimatedText() {
+      if (isVisible) {
+        animatedText.style.opacity = 0;
+        animatedText.classList.remove("visible");
+        lines.forEach(line => line.classList.remove("visible"));
+        isVisible = false;
+      }
     }
-  }
 
-  if (isMobile) {
-    window.addEventListener("scroll", () => {
-      const currentScrollY = window.scrollY;
+    function handleScroll() {
+      const triggerPoint = window.innerHeight * 0.8;
+      const elementTop = animatedText.getBoundingClientRect().top;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      if (elementTop < triggerPoint) {
         showAnimatedText();
-      } else if (currentScrollY < lastScrollY) {
+      } else {
         hideAnimatedText();
       }
+    }
 
-      lastScrollY = currentScrollY;
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Sayfa yüklendiğinde de kontrol et
+
+    arrow.addEventListener("click", () => {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
     });
   }
-
-  // Gelişmiş: Scroll bitince çalıştıran fonksiyon
-  function onScrollEnd(callback, timeout = 150) {
-    let isScrolling;
-    window.addEventListener("scroll", function () {
-      window.clearTimeout(isScrolling);
-      isScrolling = setTimeout(() => {
-        callback();
-      }, timeout);
-    }, { passive: true });
-  }
-
-  arrow.addEventListener("click", () => {
-    // Scroll başlasın
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth"
-    });
-
-    // Scroll bitince çalışacak fonksiyonu tanımla
-    onScrollEnd(() => {
-      showAnimatedText();
-    });
-  });
 });
