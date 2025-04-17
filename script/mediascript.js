@@ -6,49 +6,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let isVisible = false;
 
-  if (isMobile) {
-    animatedText.style.opacity = 0;
-    animatedText.style.transition = "opacity 0.6s ease";
-
+  if (isMobile && animatedText) {
     function showAnimatedText() {
-      if (!isVisible) {
-        animatedText.style.opacity = 1;
-        animatedText.classList.add("visible");
-        lines.forEach((line, i) => {
-          setTimeout(() => line.classList.add("visible"), i * 200);
-        });
-        isVisible = true;
-      }
+      animatedText.classList.add("visible");
+      lines.forEach((line, i) => {
+        setTimeout(() => line.classList.add("visible"), i * 200);
+      });
+      isVisible = true;
     }
 
     function hideAnimatedText() {
-      if (isVisible) {
-        animatedText.style.opacity = 0;
-        animatedText.classList.remove("visible");
-        lines.forEach(line => line.classList.remove("visible"));
-        isVisible = false;
-      }
+      animatedText.classList.remove("visible");
+      lines.forEach(line => line.classList.remove("visible"));
+      isVisible = false;
     }
 
     function handleScroll() {
       const triggerPoint = window.innerHeight * 0.8;
       const elementTop = animatedText.getBoundingClientRect().top;
 
-      if (elementTop < triggerPoint) {
+      if (elementTop < triggerPoint && !isVisible) {
         showAnimatedText();
-      } else {
+      } else if (elementTop >= triggerPoint && isVisible) {
         hideAnimatedText();
       }
     }
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Sayfa yüklendiğinde de kontrol et
+    handleScroll();
 
-    arrow.addEventListener("click", () => {
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
+    if (arrow) {
+      arrow.addEventListener("click", () => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth"
+        });
       });
-    });
+    }
   }
 });
