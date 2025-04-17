@@ -6,12 +6,12 @@
     font-family: 'Poppins', sans-serif;
   }
 
-header {
-  width: 100%;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  background-color: #f3deb9; /* veya istediğin renk */
-}
+  header {
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #f3deb9;
+  }
 
   header h1 {
     font-size: 1.5rem;
@@ -20,12 +20,13 @@ header {
   nav {
     display: block;
   }
+
   nav a {
     text-decoration: none;
     color: #1e2125;
     transition: color 0.3s;
   }
-  
+
   .language-switcher {
     display: flex;
     justify-content: center;
@@ -68,25 +69,25 @@ header {
     50% { transform: translateY(10px) rotate(45deg); }
   }
 
+  /* ANİMASYONLU YAZI */
   .animated-text {
-    display: none; /* Başlangıçta gizli */
-    overflow: hidden;
-    max-height: 0;
     opacity: 0;
+    max-height: 0;
+    overflow: hidden;
     transition: opacity 0.6s ease, max-height 0.6s ease;
   }
-  
+
   .animated-text.visible {
-    display: block; /* Görünür olduğunda */
     opacity: 1;
-    
+    max-height: 500px; /* Yazının yüksekliğine göre artırılabilir */
   }
+
   .line {
-    display: block;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
+
   .line.visible {
     opacity: 1;
     transform: translateY(0);
