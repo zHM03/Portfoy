@@ -51,11 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Ok simgesine tıklanınca animasyonu hemen göster ve sayfayı hızlıca kaydır
+  // Ok simgesine tıklanınca animasyonu hemen göster ve sayfanın en altına kaydır
   arrow.addEventListener("click", () => {
     showAnimatedText();  // Animasyonu hemen göster
     window.scrollTo({
-      top: animatedText.offsetTop - 20,  // Animasyonun olduğu yere kaydır
+      top: document.body.scrollHeight,  // Sayfanın en altına kaydır
       behavior: "smooth"  // Kaydırmayı yumuşak yap
     });
   });
