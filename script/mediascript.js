@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const isMobile = window.innerWidth <= 600;  // Ekran genişliği 600px ve altı ise mobil kabul et
+  const isMobile = window.innerWidth <= 600;
   const animatedText = document.querySelector(".animated-text");
   const arrow = document.querySelector(".arrow");
   const lines = document.querySelectorAll(".line");
@@ -7,11 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let isVisible = false;
   let lastScrollY = window.scrollY;
 
-  // Sayfa yüklendiğinde animasyonu gizle
   animatedText.style.display = "none";
 
-  // Animasyonu göstermek için fonksiyon
-  function showAnimatedText(callback) {
+  function showAnimatedText() {
     if (!isVisible) {
       animatedText.style.display = "block";
       setTimeout(() => {
@@ -19,17 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
         lines.forEach((line, i) => {
           setTimeout(() => line.classList.add("visible"), i * 200);
         });
-        if (typeof callback === "function") {
-          setTimeout(callback, lines.length * 200 + 100);  // Animasyonlar bittikten sonra çağır
-        }
-      }, 20);
+      }, 10);
       isVisible = true;
-    } else {
-      if (typeof callback === "function") callback(); // Zaten görünüyorsa direkt kaydır
     }
   }
 
-  // Animasyonu gizlemek için fonksiyon
   function hideAnimatedText() {
     if (isVisible) {
       animatedText.classList.remove("visible");
@@ -41,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Eğer mobil cihaz ise scroll hareketini dinle
   if (isMobile) {
     window.addEventListener("scroll", () => {
       const currentScrollY = window.scrollY;
@@ -56,13 +47,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Ok simgesine tıklanınca animasyonu göster ve sayfanın en altına kaydır
+  // Gelişmiş: Scroll bitince çalıştıran fonksiyon
+  function onScrollEnd(callback, timeout = 150) {
+    let isScrolling;
+    window.addEventListener("scroll", function () {
+      window.clearTimeout(isScrolling);
+      isScrolling = setTimeout(() => {
+        callback();
+      }, timeout);
+    }, { passive: true });
+  }
+
   arrow.addEventListener("click", () => {
-    showAnimatedText(() => {
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
-      });
+    // Scroll başlasın
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+
+    // Scroll bitince çalışacak fonksiyonu tanımla
+    onScrollEnd(() => {
+      showAnimatedText();
     });
   });
 });
