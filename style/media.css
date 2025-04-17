@@ -79,7 +79,7 @@ header {
   .animated-text.visible {
     display: block; /* Görünür olduğunda */
     opacity: 1;
-    max-height: 1000px; /* Yeterli yüksekliği ayarla */
+    
   }
   .line {
     display: block;
