@@ -1,0 +1,31 @@
+@media (max-width: 600px) {
+    .hero img {
+      margin: 0 auto;
+      border-radius: 50%;
+      height: 250px;
+      width: 250px;
+      border: 3px solid #f3deb9;
+      object-fit: cover;
+      object-position: 0% 35%;
+      display: block;
+    }
+    .arrow {
+      margin: 50px auto;
+      width: 30px;
+      height: 30px;
+      border-bottom: 3px solid #f3deb9;
+      border-right: 3px solid #f3deb9;
+      transform: rotate(45deg);
+      animation: bounce 1.5s infinite;
+      margin-bottom: 10px;
+    }
+    #nav {
+      flex-direction: column;
+      gap: 2px;
+      background-color: #1e2125;
+    }
+    
+    #nav.active {
+      display: flex;
+    }
+}
