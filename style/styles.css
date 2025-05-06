@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-style: normal;
 }
 
 html, body {
@@ -13,10 +13,16 @@ html, body {
 
 body {
   background-color: #1e2125;
-  color: #f3deb9;
+  color: rgb(255, 245, 233);
   line-height: 1.6;
   display: flex;
   flex-direction: column;
+  font-family: "Noto Serif Tamil", serif;
+}
+body.arabic {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  direction: rtl;
+  text-align: right;
 }
 
 header {
@@ -24,9 +30,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #1e2125;
   color: #f3deb9;
   position: relative;
+  border-bottom: 3px solid #f3deb9;
 }
 
 nav {
@@ -70,6 +76,7 @@ footer {
   width: 100%;
   position: relative;
   margin-top: auto;
+  border-top: 3px solid #f3deb9;
 }
 
 .language-switcher {
