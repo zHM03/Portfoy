@@ -22,7 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
     lines.forEach((line) => {
       line.classList.remove('visible');
     });
+
+    // Mobilde .arrow div'ine tıklanınca alta kaydır
+    const arrow = document.querySelector('.arrow');
+    if (arrow) {
+      arrow.addEventListener('click', () => {
+        window.scrollBy({ top: window.innerHeight / 1, behavior: 'smooth'
+        });
+      });
+    }
   }
+
   const animateHeroText = () => {
     const heroText = document.querySelector('.hero .animated-text');
     if (heroText) {
