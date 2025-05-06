@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HM Portföy</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style/styles.css" />
     <link rel="stylesheet" href="style/media/styles_media.css" />
     <link rel="stylesheet" href="style/index.css" />
     <link rel="stylesheet" href="style/media/index_media.css" />
+
   </head>
   <body>
     <header>
@@ -45,41 +46,60 @@
       </div>
     </div>
 
-    <h2 data-i18n="greeting">&lt;Ben Hisham/&gt;</h2>
+    <h2 class="line line-1 custom-underline" data-i18n="line1">
+      &lt;Ben Hisham&gt;
+    </h2>
     <section class="hero">
       <img src="assets/me3.jpg" class="me" alt="Hisham" />
       <div class="arrow"></div>
       <br /><br /><br />
       <div class="animated-text">
-        <span class="line" data-i18n="line1"
-          >Yazılım geliştirme yolculuğunda aktif olarak ilerleyen bir
-          geliştiriciyim.</span
+        <span class="line line-2" data-i18n="line2"
+          >Bilgisayar Programcılığı alanında Anadolu Üniversitesi
+          mezunuyum.</span
         >
-        <span class="line" data-i18n="line2"
-          >HTML, CSS ve JavaScript ile web arayüzleri oluşturabiliyor; aynı
-          zamanda Python dilinde ileri seviye bilgiye sahibim.</span
+        <span class="line line-3" data-i18n="line3"
+          >Aynı zamanda Nova IT’den aldığım eğitimlerle yazılım geliştirme
+          yetkinliğimi ileri seviyeye taşıdım.</span
         >
-        <span class="line" data-i18n="line3"
-          >Masaüstü uygulamaları geliştirmenin yanı sıra veritabanı yönetimi
-          konusunda da deneyimliyim.</span
+        <span class="line line-4" data-i18n="line4"
+          >Yazılım geliştirme yolculuğuma aktif olarak devam ediyor; hem
+          bireysel hem de ekip projelerinde yer alarak kendimi sürekli
+          geliştirmeyi hedefliyorum.</span
         >
-        <span class="line" data-i18n="line4"
-          >Ayrıca botlar geliştirerek topluluk yönetimini kolaylaştıran çözümler
-          sundum.</span
+        <span class="line line-5" data-i18n="line5"
+          >HTML, CSS ve JavaScript teknolojileriyle modern ve kullanıcı dostu
+          web arayüzleri tasarlayabiliyorum.</span
         >
-        <span class="line" data-i18n="line5"
-          >Hem bireysel hem de ekip projelerinde yer aldım; öğrenmeye ve yeni
-          teknolojilere adapte olmaya büyük önem veriyorum.</span
+        <span class="line line-6" data-i18n="line6"
+          >Python programlama dilinde ileri düzey bilgiye sahibim; bu sayede
+          masaüstü uygulamaları geliştirmenin yanı sıra veritabanı yönetimi
+          konusunda da etkin çözümler üretebiliyorum.</span
         >
-        <span class="line" data-i18n="line6"
-          >Hedefim, kullanıcı dostu ve işlevsel yazılımlar geliştirerek yazılım
-          alanında kalıcı projelere imza atmak.</span
+        <span class="line line-7" data-i18n="line7"
+          >Ayrıca, çeşitli platformlar için botlar geliştirerek topluluk
+          yönetimini kolaylaştıran projelere katkı sağladım.</span
+        >
+        <span class="line line-8" data-i18n="line8"
+          >Hedefim, kullanıcı deneyimini ön planda tutan, yenilikçi ve kalıcı
+          projelere imza atarak yazılım dünyasında güçlü bir iz bırakmak.</span
         >
       </div>
     </section>
+    <div class="social-media">
+      <a
+        href="https://www.instagram.com/the_hish4m"
+        target="_blank"
+        class="social-icon"
+      >
+        <img src="assets/social_media/insta.png" alt="Instagram" />
+      </a>
+      <a href="https://github.com/zHM03" target="_blank" class="social-icon">
+        <img src="assets/social_media/github.png" alt="GitHub" />
+      </a>
+    </div>
 
     <footer data-i18n="footer">© 2025 HM. Tüm hakları saklıdır.</footer>
-
     <script src="script/main.js" defer></script>
     <script src="script/index_lang.js"></script>
     <script src="script/index_media.js"></script>
