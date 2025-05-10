@@ -4,7 +4,6 @@ body {
   display: flex;
   justify-content: center; /* Yatay hizalama */
   align-items: center;     /* Dikey hizalama */
-  background-color: #111;  /* Koyu tema için */
   color: white;            /* Yazı rengi */
   font-family: Arial, sans-serif;
   text-align: center;
