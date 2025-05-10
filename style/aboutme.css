@@ -1,10 +1,13 @@
 body {
-  margin: 0;
-  height: 100vh;
+  background-color: #1e2125;
+  color: rgb(255, 245, 233);
+  line-height: 1.6;
   display: flex;
-  justify-content: center; /* Yatay hizalama */
-  align-items: center;     /* Dikey hizalama */
-  color: white;            /* Yazı rengi */
-  font-family: Arial, sans-serif;
-  text-align: center;
+  flex-direction: column;
+  font-family: "Noto Serif Tamil", serif;
+}
+body.arabic {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  direction: rtl;
+  text-align: right;
 }
