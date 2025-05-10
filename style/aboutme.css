@@ -1,4 +1,11 @@
-p{
-    margin: 20px 400px;
-    color: rgb(255, 245, 233)
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Yatay hizalama */
+  align-items: center;     /* Dikey hizalama */
+  background-color: #111;  /* Koyu tema için */
+  color: white;            /* Yazı rengi */
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
