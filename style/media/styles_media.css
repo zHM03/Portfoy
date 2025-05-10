@@ -45,4 +45,10 @@
     .social-icon img:hover {
       transform: scale(1.5); /* Hover efekti ile büyüme */
     }
+    .language-switcher {
+      position: absolute;
+      top: 120px;
+      left: 20px;
+      padding-top: 20px;
+    }
 }
