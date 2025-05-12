@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HM-contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/styles.css" />
+    <link rel="stylesheet" href="style/media/styles_media.css" />
+    <link rel="stylesheet" href="style/contact.css" />
+  </head>
+  <body>
+    <header>
+      <h1>HM</h1>
+      <!-- Normal nav (masaüstü için) -->
+      <nav id="nav">
+        <a href="index.html" data-i18n="home">Anasayfa</a>
+        <a href="projects.html" data-i18n="projects">Projeler</a>
+        <a href="aboutme.html" data-i18n="about">Hakkımda</a>
+        <a href="contact.html" data-i18n="contact">İletişim</a>
+      </nav>
+    </header>
+
+    <div class="language-switcher">
+      <div class="custom-dropdown">
+        <button class="dropdown-btn" id="dropdownBtn">TR</button>
+        <div class="dropdown-content" id="dropdownContent">
+          <a data-lang="tr">TR</a>
+          <a data-lang="en">EN</a>
+          <a data-lang="de">DE</a>
+          <a data-lang="ar">AR</a>
+        </div>
+      </div>
+    </div>
+    <h2 data-i18n="contact">İletişim</h2>
+    <div class="form-container">
+      <form id="contactForm" class="contact-form">
+        <label for="name" data-i18n="name">Adınız</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email" data-i18n="email">E-posta</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="subject" data-i18n="subject">Konu</label>
+        <input type="text" id="subject" name="subject" required />
+
+        <label for="message" data-i18n="message">Mesaj</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" data-i18n="send">Gönder</button><br /><br />
+
+        <p id="formStatus"></p>
+      </form>
+    </div>
+    <footer data-i18n="footer">© 2025 HM. Tüm hakları saklıdır.</footer>
+    <script src="script/main.js" defer></script>
+    <script src="script/contact.js"></script>
+    <script src="script/index_lang.js"></script>
+  </body>
+</html>

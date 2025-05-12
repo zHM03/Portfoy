@@ -1,0 +1,109 @@
+body.arabic {
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #f3deb9;
+  padding: 10px;
+  color: #1e2125;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #f3deb9;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeZoomIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeZoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.project-text {
+  flex-grow: 1;
+}
+
+.project-button {
+  align-self: flex-start;
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #1e2125;
+  color: #f3deb9;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.project-button:hover {
+  background-color: #1e2125;
+  color: #f3deb9;
+}
+
+.project-card h3 {
+  text-align: center;
+  width: 100%; /* Başlığın tam genişliğini kaplayıp ortalaması için */
+  padding-bottom: 10px;
+}
+
+.project-card p {
+  text-align: center;
+  width: 100%; /* Başlığın tam genişliğini kaplayıp ortalaması için */
+  padding-bottom: 10px;
+}
+
+/* Telefon için */
+@media (max-width: 600px) {
+  .projects {
+    grid-template-columns: 1fr;
+    max-width: 90%; /* Ekranın %90'ı kadar genişlik */
+    margin: 0 auto; /* Ortala */
+    padding: 0; /* İstersen padding kaldır */
+  }
+
+  .project-card {
+    height: auto;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  .project-card.fade-animate {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeZoomIn 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeZoomIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

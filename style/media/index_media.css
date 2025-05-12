@@ -1,0 +1,37 @@
+/* Mobil ekranlar için */
+@media (max-width: 600px) {
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(45deg); }
+    50% { transform: translateY(10px) rotate(45deg); }
+  }
+
+  /* ANİMASYONLU YAZI ALANI */
+  .animated-text {
+    min-height: 300px;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .animated-text.visible {
+    opacity: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+  }
+
+  .line:not(h2) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .line.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

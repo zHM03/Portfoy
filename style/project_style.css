@@ -1,0 +1,104 @@
+.project_text {
+  text-align: left;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.project_text.right-align {
+  text-align: right;
+}
+
+.project_section {
+  width: 100%;
+  max-width: 800px;
+  margin: 15px auto;
+  padding: 30px;
+  background-color: #f3deb9;
+  border-radius: 12px;
+  color: #1e2125;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 8px #f3deb9;
+  
+  /* Minimum yükseklik ve dikey kaydırma ekleme */
+  min-height: 600px; /* Sabit minimum yükseklik */
+  max-height: 600px; /* Maksimum yükseklik (içerik uzarsa kaydırma çubuğu görünecek) */
+  overflow-y: auto; /* Yalnızca dikey kaydırma ekle */
+  
+  /* Scroll Bar'ı özelleştirme */
+  scrollbar-width: thin; /* Firefox için ince scroll */
+  scrollbar-color: #f3deb9 #1e2125; /* Thumb ve Track renkleri */
+}
+
+/* Chrome, Safari ve Edge için özelleştirilmiş scroll bar */
+.project_section::-webkit-scrollbar {
+  width: 8px; /* Scroll çubuğunun genişliği */
+}
+
+.project_section::-webkit-scrollbar-thumb {
+  background-color: #f3deb9; /* Thumb (hareketli parça) rengi */
+  border-radius: 12px; /* Yuvarlatılmış köşeler */
+}
+
+.project_section::-webkit-scrollbar-track {
+  background-color: #1e2125; /* Track (arka plan) rengi */
+  border-radius: 12px;
+}
+
+.project_section::-webkit-scrollbar-button {
+  display: none; /* Kaydırma oklarını gizle */
+}
+
+.gallery-wrapper{
+  max-width: 800px;
+  margin: 15px auto;
+  padding: 10px;
+  background-color: #f3deb9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #f3deb9;
+  position: relative;
+}
+
+.gallery-video {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.gallery-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+  .project_section {
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+    padding: 30px;
+    background-color: #f3deb9;
+    border-radius: 12px;
+    color: #1e2125;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 8px #f3deb9;
+    
+    /* Minimum yükseklik ve dikey kaydırma ekleme */
+    min-height: 600px; /* Sabit minimum yükseklik */
+    max-height: 600px; /* Maksimum yükseklik (içerik uzarsa kaydırma çubuğu görünecek) */
+    overflow-y: auto; /* Yalnızca dikey kaydırma ekle */
+    
+    /* Scroll Bar'ı özelleştirme */
+    scrollbar-width: thin; /* Firefox için ince scroll */
+    scrollbar-color: #f3deb9 #1e2125; /* Thumb ve Track renkleri */
+  }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    justify-items: center;
+  }
+}

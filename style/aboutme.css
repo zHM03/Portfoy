@@ -1,0 +1,35 @@
+p {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  padding: 0; /* Bilgisayar için sağ/sol boşluk yok */
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeInLeft 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 600px) {
+  p {
+    margin: 1.5rem auto;
+    padding: 0 1.5rem; /* Telefon için sağ ve sol boşluk */
+    font-size: 1rem;
+    transform: translateX(-40px);
+    animation: fadeInLeft 1.5s ease forwards;
+    opacity: 0;
+  }
+  @keyframes fadeInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
