@@ -8,12 +8,10 @@ const switchLanguage = (lang) => {
       el.textContent = translations[lang][key];
     }
   });
-  
 
   const dropdownBtn = document.getElementById("dropdownBtn");
   if (dropdownBtn) dropdownBtn.textContent = lang.toUpperCase();
 
-  // Arapça hizalama burada da kontrol edilmeli
   if (lang === "ar") {
     document.body.classList.add("arabic");
   } else {
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("selectedLanguage") || "tr";
   switchLanguage(savedLang);
 
-  // Menü toggle işlemi sadece bir kez tanımlanmalı
   const menuToggle = document.getElementById("menu-toggle");
   const nav = document.getElementById("nav");
   if (menuToggle && nav) {
@@ -33,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
       nav.classList.toggle("active");
     });
   }
+
   const dropdownBtn = document.getElementById("dropdownBtn");
-if (dropdownBtn) dropdownBtn.textContent = savedLang.toUpperCase();
-  
+  if (dropdownBtn) dropdownBtn.textContent = savedLang.toUpperCase();
 
   // Dil seçimi
   document.querySelectorAll("#dropdownContent a").forEach((element) => {
@@ -45,4 +42,18 @@ if (dropdownBtn) dropdownBtn.textContent = savedLang.toUpperCase();
       switchLanguage(lang);
     });
   });
+
+  // Hamburger menü işlevi
+  const hamburger = document.getElementById("hamburger");
+  if (hamburger && nav) {
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".menu-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+      });
+    });
+  }
 });

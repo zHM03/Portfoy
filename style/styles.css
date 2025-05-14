@@ -50,18 +50,12 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-.menu-toggle {
+.hamburger {
   display: none;
-  flex-direction: column;
+  font-size: 30px;
+  padding: 15px;
   cursor: pointer;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: #e0e0e0;
-  margin: 4px 0;
-  transition: 0.4s;
+  z-index: 1001;
 }
 
 h2 {

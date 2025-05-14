@@ -1,107 +1,93 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HM Portföy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style/styles.css" />
-    <link rel="stylesheet" href="style/media/styles_media.css" />
-    <link rel="stylesheet" href="style/index.css" />
-    <link rel="stylesheet" href="style/media/index_media.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HM Portföy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-  </head>
-  <body>
-    <header>
-      <h1>HM</h1>
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav id="nav">
-        <a href="index.html" data-i18n="home">Anasayfa</a>
-        <a href="projects.html" data-i18n="projects">Projeler</a>
-        <a href="aboutme.html" data-i18n="about">Hakkımda</a>
-        <a href="contact.html" data-i18n="contact">İletişim</a>
-      </nav>
-    </header>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
 
-    <div class="language-switcher">
-      <div class="custom-dropdown">
-        <button class="dropdown-btn" id="dropdownBtn">TR</button>
-        <div class="dropdown-content" id="dropdownContent">
-          <a data-lang="tr">TR</a>
-          <a data-lang="en">EN</a>
-          <a data-lang="de">DE</a>
-          <a data-lang="ar">AR</a>
-        </div>
+  <link rel="stylesheet" href="style/styles.css" />
+  <link rel="stylesheet" href="style/media/styles_media.css" />
+  <link rel="stylesheet" href="style/index.css" />
+  <link rel="stylesheet" href="style/media/index_media.css" />
+
+</head>
+
+<body>
+  <header>
+    <h1>HM</h1>
+  <div class="hamburger" id="hamburger">☰</div>
+
+  <nav id="nav">
+    <div class="menu-bg" id="menu-bg"></div>
+    <div class="menu-links">
+      <a href="index.html" data-i18n="home">Anasayfa</a>
+      <a href="projects.html" data-i18n="projects">Projeler</a>
+      <a href="aboutme.html" data-i18n="about">Hakkımda</a>
+      <a href="contact.html" data-i18n="contact">İletişim</a>
+    </div>
+  </nav>
+  </header>
+
+  <div class="language-switcher">
+    <div class="custom-dropdown">
+      <button class="dropdown-btn" id="dropdownBtn">TR</button>
+      <div class="dropdown-content" id="dropdownContent">
+        <a data-lang="tr">TR</a>
+        <a data-lang="en">EN</a>
+        <a data-lang="de">DE</a>
+        <a data-lang="ar">AR</a>
       </div>
     </div>
+  </div>
 
-    <h2 class="line line-1 custom-underline" data-i18n="line1">
-      &lt;Ben Hisham&gt;
-    </h2>
-    <section class="hero">
-      <img src="assets/me3.jpg" class="me" alt="Hisham" />
-      <div class="arrow"></div>
-      <br /><br /><br />
-      <div class="animated-text">
-        <span class="line line-2" data-i18n="line2"
-          >Bilgisayar Programcılığı alanında Anadolu Üniversitesi
-          mezunuyum.</span
-        >
-        <span class="line line-3" data-i18n="line3"
-          >Aynı zamanda Nova IT’den aldığım eğitimlerle yazılım geliştirme
-          yetkinliğimi ileri seviyeye taşıdım.</span
-        >
-        <span class="line line-4" data-i18n="line4"
-          >Yazılım geliştirme yolculuğuma aktif olarak devam ediyor; hem
-          bireysel hem de ekip projelerinde yer alarak kendimi sürekli
-          geliştirmeyi hedefliyorum.</span
-        >
-        <span class="line line-5" data-i18n="line5"
-          >HTML, CSS ve JavaScript teknolojileriyle modern ve kullanıcı dostu
-          web arayüzleri tasarlayabiliyorum.</span
-        >
-        <span class="line line-6" data-i18n="line6"
-          >Python programlama dilinde ileri düzey bilgiye sahibim; bu sayede
-          masaüstü uygulamaları geliştirmenin yanı sıra veritabanı yönetimi
-          konusunda da etkin çözümler üretebiliyorum.</span
-        >
-        <span class="line line-7" data-i18n="line7"
-          >Ayrıca, çeşitli platformlar için botlar geliştirerek topluluk
-          yönetimini kolaylaştıran projelere katkı sağladım.</span
-        >
-        <span class="line line-8" data-i18n="line8"
-          >Hedefim, kullanıcı deneyimini ön planda tutan, yenilikçi ve kalıcı
-          projelere imza atarak yazılım dünyasında güçlü bir iz bırakmak.</span
-        >
-      </div>
-    </section>
-    <div class="social-media">
-      <a
-        href="https://www.instagram.com/the_hish4m"
-        target="_blank"
-        class="social-icon"
-      >
-        <img src="assets/social_media/insta.png" alt="Instagram" />
-      </a>
-      <a href="https://github.com/zHM03" target="_blank" class="social-icon">
-        <img src="assets/social_media/github.png" alt="GitHub" />
-      </a>
+  <h2 class="line line-1 custom-underline" data-i18n="line1">
+    &lt;Ben Hisham&gt;
+  </h2>
+  <section class="hero">
+    <img src="assets/me3.jpg" class="me" alt="Hisham" />
+    <div class="arrow"></div>
+    <br /><br /><br />
+    <div class="animated-text">
+      <span class="line line-2" data-i18n="line2">Bilgisayar Programcılığı alanında Anadolu Üniversitesi
+        mezunuyum.</span>
+      <span class="line line-3" data-i18n="line3">Aynı zamanda Nova IT’den aldığım eğitimlerle yazılım geliştirme
+        yetkinliğimi ileri seviyeye taşıdım.</span>
+      <span class="line line-4" data-i18n="line4">Yazılım geliştirme yolculuğuma aktif olarak devam ediyor; hem
+        bireysel hem de ekip projelerinde yer alarak kendimi sürekli
+        geliştirmeyi hedefliyorum.</span>
+      <span class="line line-5" data-i18n="line5">HTML, CSS ve JavaScript teknolojileriyle modern ve kullanıcı dostu
+        web arayüzleri tasarlayabiliyorum.</span>
+      <span class="line line-6" data-i18n="line6">Python programlama dilinde ileri düzey bilgiye sahibim; bu sayede
+        masaüstü uygulamaları geliştirmenin yanı sıra veritabanı yönetimi
+        konusunda da etkin çözümler üretebiliyorum.</span>
+      <span class="line line-7" data-i18n="line7">Ayrıca, çeşitli platformlar için botlar geliştirerek topluluk
+        yönetimini kolaylaştıran projelere katkı sağladım.</span>
+      <span class="line line-8" data-i18n="line8">Hedefim, kullanıcı deneyimini ön planda tutan, yenilikçi ve kalıcı
+        projelere imza atarak yazılım dünyasında güçlü bir iz bırakmak.</span>
     </div>
+  </section>
+  <div class="social-media">
+    <a href="https://www.instagram.com/the_hish4m" target="_blank" class="social-icon">
+      <img src="assets/social_media/insta.png" alt="Instagram" />
+    </a>
+    <a href="https://github.com/zHM03" target="_blank" class="social-icon">
+      <img src="assets/social_media/github.png" alt="GitHub" />
+    </a>
+  </div>
 
-    <footer data-i18n="footer">© 2025 HM. Tüm hakları saklıdır.</footer>
-    <script src="script/main.js" defer></script>
-    <script src="script/index_lang.js"></script>
-    <script src="script/index_media.js"></script>
-  </body>
+  <footer data-i18n="footer">© 2025 HM. Tüm hakları saklıdır.</footer>
+  <script src="script/main.js" defer></script>
+  <script src="script/index_lang.js"></script>
+  <script src="script/index_media.js"></script>
+</body>
+
 </html>
